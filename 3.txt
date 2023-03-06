@@ -1,0 +1,13 @@
+Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string");
+
+        String str = sc.next();
+        str += '\0';
+        int size = 0;
+
+        while(str.charAt(size) != '\0')
+        {
+            size++;
+        }
+
+        System.out.println("Size is: " + size);

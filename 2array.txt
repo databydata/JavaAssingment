@@ -1,0 +1,38 @@
+	Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of array");
+
+        int size = sc.nextInt();
+
+        int[] arr;
+
+        arr = new int[size];
+
+        System.out.println("Enter the elements of array!");
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter the element to be removed!");
+        int search = sc.nextInt();
+        boolean found = false;
+        int index = -1;
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == search) {
+                found = true;
+                index = i;
+                break;
+            }
+        }
+
+        if (found == true) {
+            for (int i = index; i < size - 1; i++) {
+                arr[i] = arr[i+1];
+            }
+        } else {
+            System.out.println("Invalid Element!");
+        }
+
+        for (int i = 0; i < size - 1; i++) {
+            System.out.println(arr[i]);
+        }
